@@ -32,6 +32,9 @@ var arguments = process.argv;
 arguments.splice(0, 2);
 
 arguments.forEach(function (word, index) {
+  // This regex remove any non alphabetic digit
+  word = word.replace(/[^a-z]/gi, '');
+
   var validWord = [];
   var code = '';
   var splittedWord = word.toUpperCase().split('');
@@ -63,6 +66,6 @@ arguments.forEach(function (word, index) {
     });
   }
 
-  console.log(code);
+  console.log(firstLetter + '-' + code);
   console.log('------------');
 });
