@@ -1,5 +1,6 @@
 var fs = require('fs');
 var setWordCode = require('./setWordCode');
+var matchWords = require('./matchWords');
 
 var data;
 try {
@@ -22,19 +23,10 @@ data.forEach(function (word) {
 var arguments = process.argv;
 arguments.splice(0, 2);
 
-
 arguments.forEach(function (word) {
   var wordCode = setWordCode(word);
-  var matches = '';
 
-  var match = dictionaryWords.filter(function (element) {
-    return element.code == wordCode;
-  });
-
-  dictionaryWords.forEach(function (word) {
-    if (word.code == wordCode)
-      matches == '' ? matches += word.word : matches += ', ' + word.word;
-  });
+  var matches = matchWords(word, wordCode, dictionaryWords);
 
   if (matches == '')
     return console.log(word + ' (' + wordCode + ')' + ' - There\'s no matches for this word.');
