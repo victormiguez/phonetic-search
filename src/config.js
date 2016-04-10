@@ -1,5 +1,5 @@
 var config = {
-  validLetters: 'CGJKQSXYZBFPVDTMN',
+  validLetters: 'CGJKQSXZBFPVDTMN',
   groups: {
     AEIOU: 1,
     CGJKQSXYZ: 2,
