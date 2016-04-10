@@ -18,20 +18,26 @@ data.forEach(function (word) {
     code: wordCode
   });
 });
-console.log(dictionaryWords);
 
 var arguments = process.argv;
 arguments.splice(0, 2);
 
-  console.log('------------');
-  console.log('------------');
-  console.log('------------');
-  console.log('------------');
 
 arguments.forEach(function (word) {
-
   var wordCode = setWordCode(word);
+  var matches = '';
 
-  console.log(wordCode);
-  console.log('------------');
+  var match = dictionaryWords.filter(function (element) {
+    return element.code == wordCode;
+  });
+
+  dictionaryWords.forEach(function (word) {
+    if (word.code == wordCode)
+      matches == '' ? matches += word.word : matches += ', ' + word.word;
+  });
+
+  if (matches == '')
+    return console.log(word + ' (' + wordCode + ')' + ' - There\'s no matches for this word.');
+
+  console.log(word + ' (' + wordCode + ')' + ' - ' + matches);
 });
