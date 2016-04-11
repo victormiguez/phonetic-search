@@ -1,0 +1,23 @@
+{
+  "name": "phonetic-search",
+  "version": "1.0.0",
+  "description": "The algorithm decides if a word is phonetically equivalent. This follow this steps:",
+  "main": "src/app.js",
+  "scripts": {
+    "start": "node ./src/app.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/victormiguez/phonetic-search.git"
+  },
+  "author": "Victor Miguez",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/victormiguez/phonetic-search/issues"
+  },
+  "homepage": "https://github.com/victormiguez/phonetic-search#readme",
+  "devDependencies": {
+    "chai": "^3.5.0"
+  }
+}
