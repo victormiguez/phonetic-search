@@ -2,7 +2,7 @@ To run the application you must have Nodejs installed on your machine, then go t
 "npm start your random words"
 or
 "node src/app.js your random words"
-It will always look for a file called "dictionary.txt" to make the comparsions.
+It will always look for a file called "dictionary.txt" to make the comparsions. Every word that you want to test must be added inside this file.
 
 Running tests
 
