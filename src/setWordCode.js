@@ -20,8 +20,8 @@ function setWordCode (word) {
   });
 
   for (var i = 0; i < splittedWordLength; i++) {
-    var currentLetter = splittedWord[i];
-    var isValidLetter = config.validLetters.indexOf(currentLetter) > -1;
+    var currentLetter = splittedWord[i],
+      isValidLetter = config.validLetters.indexOf(currentLetter) > -1;
 
     if (!isValidLetter)
       continue;

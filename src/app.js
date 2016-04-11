@@ -14,6 +14,7 @@ var dictionaryWords = [];
 
 data.forEach(function (word) {
   var wordCode = setWordCode(word);
+
   dictionaryWords.push({
     word: word,
     code: wordCode
@@ -24,9 +25,8 @@ var arguments = process.argv;
 arguments.splice(0, 2);
 
 arguments.forEach(function (word) {
-  var wordCode = setWordCode(word);
-
-  var matches = matchWords(word, wordCode, dictionaryWords);
+  var wordCode = setWordCode(word),
+    matches = matchWords(word, wordCode, dictionaryWords);
 
   if (matches == '')
     return console.log(word + ' (' + wordCode + ')' + ' - There\'s no matches for this word.');
