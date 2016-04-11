@@ -13,6 +13,12 @@ function setWordCode (word) {
     lastLetterCode = '',
     code = '';
 
+  groupKeys.forEach(function (group, index) {
+    var groupCode = config.groups[group];
+
+    group.indexOf(firstLetter) > -1 ? firstLetter = config.groups[group] : firstLetter = firstLetter;
+  });
+
   for (var i = 0; i < splittedWordLength; i++) {
     var currentLetter = splittedWord[i];
     var isValidLetter = config.validLetters.indexOf(currentLetter) > -1;
