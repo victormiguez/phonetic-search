@@ -5,8 +5,8 @@ var matchWords = require('./matchWords');
 var data;
 try {
   data = fs.readFileSync('./dictionary.txt', 'utf8').toUpperCase().split('\r\n');
-} catch (e) {
-  console.error('Error! I\'m unable to read your dictionary.txt');
+} catch (err) {
+  throw new Error('Error! Unable to read your dictionary.txt');
   process.exit();
 }
 

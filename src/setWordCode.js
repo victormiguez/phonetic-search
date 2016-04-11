@@ -2,7 +2,7 @@ var config = require('./config');
 
 function setWordCode (word) {
   if (!word) {
-    throw 'Please, give me at least one word';
+    throw new Error('Please, give me at least one word');
     process.exit();
   }
 
