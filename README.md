@@ -16,9 +16,28 @@ This follow this steps:
 
 ## Running the project
 ```
+npm start your random words
+```
+Or
+```
 node src/app.js your random words
 ```
 It will always look for a file called "dictionary.txt" to make the comparsions.
+
+## Running tests
+You must install Mocha globaly:
+```
+npm install -g mocha
+```
+Then install the other project dependencies:
+```
+npm install
+```
+After this, run:
+```
+npm test
+```
+
 
 ## References
 [Wikipedia - Soundex](https://en.wikipedia.org/wiki/Soundex)
