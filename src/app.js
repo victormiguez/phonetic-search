@@ -10,15 +10,13 @@ try {
   process.exit();
 }
 
-var dictionaryWords = [];
-
-data.forEach(function (word) {
+var dictionaryWords = data.map(function (word) {
   var wordCode = setWordCode(word);
 
-  dictionaryWords.push({
+  return {
     word: word,
     code: wordCode
-  });
+  };
 });
 
 var arguments = process.argv;
